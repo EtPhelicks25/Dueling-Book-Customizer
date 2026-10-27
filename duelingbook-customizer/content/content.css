@@ -1,0 +1,14 @@
+/*
+ * content.css — Minimal styles injected into DuelingBook pages.
+ *
+ * Adds a subtle border to replaced images so the user can tell
+ * at a glance which elements are being customized.
+ * Remove or adjust as preferred.
+ */
+
+/* Optional: highlight customized images during development */
+/*
+img[data-db-customized] {
+  outline: 2px solid #e94560 !important;
+}
+*/

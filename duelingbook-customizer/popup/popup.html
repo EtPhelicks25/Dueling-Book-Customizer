@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DuelingBook Customizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎴 DB Customizer</h1>
+    <p class="subtitle">Solo visible para ti</p>
+
+    <!-- ========== AVATAR / PROFILE PIC ========== -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Foto de Perfil</h2>
+        <label class="toggle">
+          <input type="checkbox" id="avatarEnabled">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="profilePicId">ID de tu foto actual en DB:</label>
+        <div class="field-row">
+          <input type="text" id="profilePicId" placeholder="Ej: 244839" class="text-input">
+          <button class="btn btn-small btn-detect" id="detectBtn" title="Detectar desde la página">🔍</button>
+        </div>
+        <p class="field-hint">Abre tu perfil en DB, haz clic derecho en tu foto → "Copiar dirección de imagen" → pega aquí el número final.</p>
+      </div>
+
+      <div class="upload-area" id="avatarUploadArea">
+        <div class="preview-wrapper">
+          <img id="avatarPreview" class="preview-img hidden" alt="Avatar preview">
+          <span id="avatarPlaceholder" class="placeholder">Haz clic o arrastra tu imagen personalizada</span>
+        </div>
+        <input type="file" id="avatarFile" accept="image/*" hidden>
+      </div>
+      <button class="btn btn-danger" id="avatarClear">Restablecer foto</button>
+    </section>
+
+    <!-- ========== MY SLEEVES ========== -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Mis Sleeves</h2>
+        <label class="toggle">
+          <input type="checkbox" id="mySleevesEnabled">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="upload-area" id="mySleevesUploadArea">
+        <div class="preview-wrapper">
+          <img id="mySleevesPreview" class="preview-img hidden" alt="My sleeves preview">
+          <span id="mySleevesPlaceholder" class="placeholder">Haz clic o arrastra una imagen</span>
+        </div>
+        <input type="file" id="mySleevesFile" accept="image/*" hidden>
+      </div>
+      <button class="btn btn-danger" id="mySleevesClear">Restablecer mis sleeves</button>
+    </section>
+
+    <!-- ========== OPPONENT SLEEVES ========== -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Sleeves Oponente</h2>
+        <label class="toggle">
+          <input type="checkbox" id="oppSleevesEnabled">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="upload-area" id="oppSleevesUploadArea">
+        <div class="preview-wrapper">
+          <img id="oppSleevesPreview" class="preview-img hidden" alt="Opponent sleeves preview">
+          <span id="oppSleevesPlaceholder" class="placeholder">Haz clic o arrastra una imagen</span>
+        </div>
+        <input type="file" id="oppSleevesFile" accept="image/*" hidden>
+      </div>
+      <button class="btn btn-danger" id="oppSleevesClear">Restablecer sleeves oponente</button>
+    </section>
+
+    <div class="footer">
+      <p>Los cambios se aplican al recargar DuelingBook.</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
